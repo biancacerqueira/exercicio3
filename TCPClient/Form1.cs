@@ -37,7 +37,7 @@ namespace ChatIP
 
         private void btDisconnect_Click(object sender, EventArgs e)
         {
-            //conecta o cliente com o servidor
+            //Desconecta o cliente do servidor
             if (client.IsConnected)
             {
                 try
@@ -48,7 +48,7 @@ namespace ChatIP
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Precisa estar conectado para desconectar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else {
